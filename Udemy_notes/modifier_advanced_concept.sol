@@ -60,3 +60,33 @@ contract RestrictedAddress2 {
         delete owner;
     }
 }
+
+
+/* Exercise:
+    1. Create a modifier called costs which takes an _amount parameter
+    2. Require that msg.value is greater than equla to the amount
+    3. If the msg.value is not greater than or equal to the amount return a string says Not enough
+    4. Write a function called forceOwnerChange which takes and address called _newOwner and is payable
+    5. Add a modification to the signature so that the function needs 200 ether to execute
+    6. Set the owner of the contract to the new owner of the address
+    7. Bonus- Figure out how to make the function actually run 
+*/
+
+contract RestrictedAddress3 {
+
+    address owner;
+
+    constructor() {
+        owner = msg.sender; // Contract deploy karne wala default owner hoga
+    }
+
+    modifier costs(uint _amount) {
+        require(msg.value >= _amount, "Not Enough Ether");
+        _;
+    }
+
+    function forceOwnerChange (address _newOwner) public payable costs(200 ether) {
+        owner = _newOwner;
+    }
+
+}
