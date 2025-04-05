@@ -42,4 +42,4 @@ Feel free to explore and learn from it!
 ## 👤 Author
 
 **Gakarot** – Aspiring Developer | Solidity Enthusiast  
-GitHub: [yourusername](https://github.com/NetGakarot)
+GitHub: [NetGakarot](https://github.com/NetGakarot)
