@@ -30,7 +30,7 @@ Every folder in this repo represents a key concept or module in Solidity.
 
 ## 🚀 How to Use
 
-## Clone the repo:
+1. Clone the repo:
    ```bash
    git clone https://github.com/NetGakarot/Solidity-Practice.git
 
